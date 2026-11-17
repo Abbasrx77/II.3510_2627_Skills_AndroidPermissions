@@ -1,0 +1,143 @@
+<resources>
+    <string name="app_name">PermDemo</string>
+
+    <string name="home_title">Les permissions Android</string>
+    <string name="home_subtitle">6 cas, en direct. Touchez une carte pour suivre le cycle de vie.</string>
+    <string name="home_credits">Abbas MAMA · Gabriel FOMI · ISEP</string>
+
+    <string name="case_camera">Caméra</string>
+    <string name="case_location">Localisation</string>
+    <string name="case_notifications">Notifications</string>
+    <string name="case_photo_picker">Photo Picker</string>
+    <string name="case_mic">Micro</string>
+    <string name="case_exact_alarm">Alarme exacte</string>
+    <string name="no_constant">Rien à déclarer</string>
+
+    <string name="type_normal">Permission normale</string>
+    <string name="type_signature">Permission signature</string>
+    <string name="type_dangerous">Permission dangereuse</string>
+    <string name="type_special">Permission spéciale</string>
+    <string name="type_none">Aucune permission</string>
+
+    <string name="who_decides_label">Qui décide ?</string>
+    <string name="who_decides_normal">Le système, à l\'installation</string>
+    <string name="who_decides_signature">Le système, selon le certificat de signature</string>
+    <string name="who_decides_dangerous">L\'utilisateur, dans une boîte de dialogue</string>
+    <string name="who_decides_special">L\'utilisateur, dans les Paramètres</string>
+    <string name="who_decides_none">Personne : l\'utilisateur choisit lui-même la photo</string>
+
+    <string name="status_never_asked">Jamais demandée</string>
+    <string name="status_granted">Accordée</string>
+    <string name="status_approximate">Accordée · approximative</string>
+    <string name="status_partial">Accès partiel</string>
+    <string name="status_denied">Refusée</string>
+    <string name="status_permanently_denied">Refus définitif</string>
+    <string name="status_not_needed">Non nécessaire</string>
+
+    <string name="back">← Accueil</string>
+    <string name="section_files">Fichiers touchés</string>
+    <string name="action_request">Demander la permission</string>
+    <string name="action_open_settings">Ouvrir les Paramètres</string>
+    <string name="section_action">Action</string>
+    <string name="section_lifecycle">Cycle de vie</string>
+    <string name="section_log">Journal</string>
+    <string name="clear_log">Effacer le journal</string>
+    <string name="log_empty">Le journal est vide. Appuyez sur un bouton pour lancer le cycle.</string>
+    <string name="step_in_progress">en cours</string>
+    <string name="system_side">Côté système</string>
+    <string name="system_side_hint">Où l\'utilisateur retrouve ce réglage :</string>
+
+    <string name="step_declared">Déclarée dans le Manifest</string>
+    <string name="step_check">Vérifier</string>
+    <string name="step_explain">Expliquer</string>
+    <string name="step_request">Demander</string>
+    <string name="step_handle">Gérer : accordée, refusée ou refus définitif</string>
+    <string name="step_use">Utiliser, ou ouvrir les Paramètres si refus définitif</string>
+    <string name="step_explain_sheet">Expliquer : feuille d\'explication</string>
+    <string name="step_open_settings">Ouvrir les Paramètres</string>
+    <string name="step_back_in_app">Retour dans l\'app : revérifier</string>
+    <string name="step_schedule_alarm">Programmer l\'alarme</string>
+    <string name="step_nothing_to_declare">Rien à déclarer</string>
+    <string name="step_open_picker">Ouvrir le sélecteur</string>
+    <string name="step_user_picks">L\'utilisateur choisit une photo</string>
+    <string name="step_receive_uri">L\'app reçoit une URI, valable pour cette photo seulement</string>
+    <string name="step_show_photo">Afficher la photo</string>
+
+    <string name="role_manifest_camera">Déclare la permission CAMERA. uses-feature en required=\"false\" : l\'app s\'installe aussi sans appareil photo.</string>
+    <string name="role_manifest_location">Déclare la position précise, approximative et en arrière-plan. Sans déclaration, la demande échoue.</string>
+    <string name="role_manifest_notifications">Déclare POST_NOTIFICATIONS, qui n\'existe qu\'à partir d\'Android 13.</string>
+    <string name="role_manifest_photos">Uniquement pour la version avec permission. Le Photo Picker, lui, n\'a besoin d\'aucune ligne.</string>
+    <string name="role_manifest_mic">Déclare l\'accès au micro.</string>
+    <string name="role_manifest_alarm">Déclare la permission spéciale. Elle s\'accorde dans les Paramètres, pas dans une boîte de dialogue.</string>
+    <string name="role_camera_demo">Lance le cycle de PermissionFlow, puis TakePicturePreview une fois CAMERA accordée.</string>
+    <string name="role_location_demo">La position en arrière-plan passe par le même PermissionFlow ; LocationManager ne liste que les fournisseurs autorisés.</string>
+    <string name="role_notifications_demo">Le bouton déclenche le cycle, puis envoie la notification de test.</string>
+    <string name="role_notification_helper">Vérifie que les notifications sont autorisées avant d\'en envoyer une.</string>
+    <string name="role_app">Crée le canal de notification au démarrage de l\'app.</string>
+    <string name="role_photo_demo">Aucune permission : le sélecteur renvoie une URI valable pour la photo choisie seulement.</string>
+    <string name="role_mic_demo">Enregistre 3 secondes une fois RECORD_AUDIO accordée.</string>
+    <string name="role_audio_recorder">MediaRecorder écrit dans le cache de l\'app : aucune permission de stockage nécessaire.</string>
+    <string name="role_alarm_demo">Pas de résultat à attendre : on revérifie au retour des Paramètres (ON_RESUME).</string>
+    <string name="role_alarm_receiver">Reçoit l\'alarme exacte et affiche la notification.</string>
+    <string name="role_prefs">Mémorise qu\'une demande a déjà eu lieu : c\'est ce qui distingue « jamais demandée » de « refus définitif ».</string>
+
+    <string name="system_camera">Paramètres › Applis › PermDemo › Autorisations › Appareil photo</string>
+    <string name="system_location">Paramètres › Applis › PermDemo › Autorisations › Position</string>
+    <string name="system_notifications">Paramètres › Applis › PermDemo › Notifications</string>
+    <string name="system_photo_picker">Aucune entrée pour le sélecteur. Version avec permission : Paramètres › Applis › PermDemo › Autorisations › Photos et vidéos</string>
+    <string name="system_mic">Paramètres › Applis › PermDemo › Autorisations › Micro</string>
+    <string name="system_exact_alarm">Paramètres › Applis › PermDemo › Alarmes et rappels</string>
+
+    <string name="camera_take_photo">Prendre une photo</string>
+    <string name="camera_thumbnail">Miniature prise par l\'appareil photo</string>
+
+    <string name="location_show">Afficher ma position</string>
+    <string name="location_precise">Précision choisie : précise</string>
+    <string name="location_approximate">Précision choisie : approximative</string>
+    <string name="location_searching">Recherche de la position…</string>
+    <string name="location_unavailable">Aucune position obtenue pour l\'instant. Réessayez dans quelques secondes, idéalement près d\'une fenêtre. (Émulateur : Extended controls › Location.)</string>
+    <string name="location_disabled">La permission est accordée, mais la localisation de l\'appareil est désactivée. Activez « Localisation » dans les réglages rapides, puis réessayez.</string>
+    <string name="location_result">%1$s\n± %2$d m · fournisseur %3$s</string>
+    <string name="location_background">Autoriser en arrière-plan</string>
+    <string name="location_background_label">Arrière-plan :</string>
+    <string name="location_background_hint">Actif seulement après l\'accès au premier plan. Depuis Android 11, cette demande ouvre les Paramètres : il faut y choisir « Toujours autoriser ».</string>
+
+    <string name="notif_channel_name">Démo PermDemo</string>
+    <string name="notif_send">Envoyer une notification de test</string>
+    <string name="notif_test_title">Notification de test</string>
+    <string name="notif_test_text">Envoyée par PermDemo grâce à POST_NOTIFICATIONS.</string>
+    <string name="notif_sent">Notification envoyée (%1$d). Ouvrez le volet des notifications.</string>
+    <string name="notif_not_needed">Android %1$d : avant Android 13, aucune permission n\'est demandée, la notification part directement.</string>
+
+    <string name="photo_pick">Choisir une photo</string>
+    <string name="photo_picked">Photo choisie</string>
+    <string name="photo_no_permission_hint">Aucune boîte de dialogue : le sélecteur du système donne à l\'app cette photo, et seulement elle.</string>
+    <string name="photo_compare_title">Comparaison : avec permission</string>
+    <string name="photo_compare_button">Version avec permission</string>
+    <string name="photo_compare_status">Accès aux photos :</string>
+    <string name="photo_compare_message">Même résultat qu\'avec le sélecteur, mais il faut déclarer, demander, expliquer et gérer une permission.</string>
+    <plurals name="photo_visible_count">
+        <item quantity="one">%1$d photo visible par l\'app</item>
+        <item quantity="other">%1$d photos visibles par l\'app</item>
+    </plurals>
+
+    <string name="mic_record">Enregistrer 3 secondes</string>
+    <string name="mic_play">Écouter</string>
+    <string name="mic_recording">● Enregistrement en cours… L\'indicateur vert de confidentialité est allumé en haut de l\'écran (Android 12+).</string>
+    <string name="mic_ready">Enregistrement prêt : %1$s (%2$d Ko), dans le cache de l\'app.</string>
+
+    <string name="alarm_button">Alarme dans 10 secondes</string>
+    <string name="alarm_scheduled">Alarme programmée pour %1$s. Elle arrive sous forme de notification, si les notifications sont autorisées.</string>
+    <string name="alarm_notif_title">Alarme exacte</string>
+    <string name="alarm_notif_text">Prévue à %1$s, reçue à %2$s.</string>
+
+    <string name="rationale_title">Pourquoi %1$s ?</string>
+    <string name="rationale_continue">Continuer</string>
+    <string name="rationale_not_now">Pas maintenant</string>
+    <string name="rationale_camera">PermDemo a besoin de l\'appareil photo pour prendre une photo et l\'afficher ici. Rien n\'est envoyé ni enregistré.</string>
+    <string name="rationale_location">PermDemo affiche votre dernière position connue pour montrer la différence entre position précise et approximative. Elle ne quitte pas le téléphone.</string>
+    <string name="rationale_notifications">PermDemo envoie une seule notification de test, uniquement quand vous appuyez sur le bouton.</string>
+    <string name="rationale_photos">Cette version montre l\'ancienne méthode : lire la galerie avec une permission. Le Photo Picker fait la même chose sans rien demander.</string>
+    <string name="rationale_mic">PermDemo enregistre 3 secondes dans son cache pour vous les faire réécouter. Rien n\'est envoyé.</string>
+    <string name="rationale_exact_alarm">Une alarme exacte doit sonner à la seconde près. Android 14 refuse cette permission par défaut : il faut l\'activer dans les Paramètres.</string>
+</resources>
